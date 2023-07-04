@@ -13,20 +13,17 @@
     <!-- ------------------------------------------------header section------------------------------------------ -->
     <header id="header">
         <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <a class="navbar-brand" href="#"><img  src="images/logo.png" alt="Logo" width="80px"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbar">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a href="#header" class="nav-link active">Home</a></li>
-                        <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
-                        <li class="nav-item"><a href="#learnings" class="nav-link">Learnings</a></li>
-                        <li class="nav-item"><a href="#refrence" class="nav-link">Refrence</a></li>
-                        <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
-                    </ul>
-                </div>
+            <nav>
+                <img class="logo" src="/images/logo.png" alt="Omar logo" width="80px">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#learnings">Learnings</a></li>
+                    <li><a href="#refrence">References</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fas-times fa-solid fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
                 <p>Welcome To My World!</p>
@@ -154,7 +151,7 @@
                         <input type="text" name="Name" placeholder="Your Name" required>
                         <input type="email" name="email" placeholder="Your email" required>
                         <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                        <button type="submit" class="button btn2">Submit</button>
+                        <button type="submit" class="button btn2 btn3">Submit</button>
                     </form>
                 </div>
             </div>
@@ -177,6 +174,14 @@
             document.getElementById(tabname).classList.add("active-tab");
         }
     </script>
-
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+        function openmenu(){
+            sidemenu.style.right="0";
+        }
+        function closemenu(){
+            sidemenu.style.right="-200px";
+        }
+    </script>
 </body>
 </html>
