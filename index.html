@@ -19,7 +19,7 @@
                     <li><a href="#header">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#learnings">Learnings</a></li>
-                    <li><a href="#refrence">References</a></li>
+                    <li><a href="#reference-container">References</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <i class="fas fas-times fa-solid fa-times" onclick="closemenu()"></i>
                 </ul>
@@ -56,15 +56,18 @@
                         <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
                         <p class="tab-links" onclick="opentab('experience')">Experience</p>
                         <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('languages')">Languages</p>
                     </div>
                     <div class="tab-contents active-tab" id="skills">
                         <ul>
+                            <i class="fas fas-times fa-solid fa-times" onclick="closetab()"></i>
                             <li><span>UI?UX</span><br>Designing Web/App interfaces.</li>
                             <li><span>Web Development</span><br>Web app Development.</li>
                         </ul>
                     </div>
                     <div class="tab-contents" id="experience">
                         <ul>
+                            <i class="fas fas-times fa-solid fa-times" onclick="closetab()"></i>
                             <li><span>May.2022 - Feb.2023</span><br>Grduation Project - TechPark is a smart and safty parking system.</li>
                             <li><span>Oct.2022 - Feb.2023</span><br>Student Support Center - Technical Support speciallist at Yarmouk Universty.</li>
                             <li><span>2023 - Current</span><br>Full-Stack Web Development at Orange TM.</li>
@@ -72,8 +75,56 @@
                     </div>
                     <div class="tab-contents" id="education">
                         <ul>
+                            <i class="fas fas-times fa-solid fa-times" onclick="closetab()"></i>
                             <li><span>2019 - 2023</span><br>Information Technology - Computer Sceince at Yarmouk Universty.</li>
                             <li><span>2023</span><br>Web app Development Training at Orange.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="languages">
+                        <ul>
+                            <i class="fas fas-times fa-solid fa-times" onclick="closetab()"></i>
+                            <li>
+                                <span>Arabic</span>
+                                <div class="skill-box speakinga">
+                                    <span class="title">Speaking</span>
+                                    <div class="skill-bar">
+                                        <span class="skill-per"></span>
+                                    </div>
+                                </div>
+                                <div class="skill-box listeninga">
+                                    <span class="title">Listening</span>
+                                    <div class="skill-bar">
+                                        <span class="skill-per"></span>
+                                    </div>
+                                </div>
+                                <div class="skill-box writinga">
+                                    <span class="title">Writing</span>
+                                    <div class="skill-bar">
+                                        <span class="skill-per"></span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <span>Eglish</span>
+                                <div class="skill-box speaking">
+                                    <span class="title">Speaking</span>
+                                    <div class="skill-bar">
+                                        <span class="skill-per"></span>
+                                    </div>
+                                </div>
+                                <div class="skill-box listening">
+                                    <span class="title">Listening</span>
+                                    <div class="skill-bar">
+                                        <span class="skill-per"></span>
+                                    </div>
+                                </div>
+                                <div class="skill-box writing">
+                                    <span class="title">Writing</span>
+                                    <div class="skill-bar">
+                                        <span class="skill-per"></span>
+                                    </div>
+                                </div>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -87,11 +138,6 @@
         <div class="container" >
             <h1 class="sub-title">My Learnings</h1>
             <div class="learnings-list">
-                <div>
-                    <i class="fa-solid fa-language"></i>
-                    <h2>Languages</h2>
-                    <p>I am an arabic native speacker. <br>English: C2 level.</p>
-                </div>
                 <div>
                     <i class="fa-solid fa-computer"></i>
                     <h2>Computer Sceince Graduate</h2>
@@ -110,17 +156,41 @@
 
     <!-- --------------------------------refrence sectione------------------------------------------------------ -->
 
-    <div id="refrence">
+    <div id="reference-container">
         <div class="container">
-            <h1 class="sub-title refrence">My Refrence</h1>
-            <div class="refrence-list">
-                <div class="refrence">
-                    <img src="images/coach-hala.jpg">
+            <h1 class="sub-title">My References</h1>
+            <div class="reference-list">
+                <div class="reference">
+                    <img src="images/coach-hala.png">
                     <div class="layer">
                         <h3>Hala Hamdan</h3>
                         <p>Lead Trainer @ Orange Coding Academy <br>
                             gt.halla.hamdan@orange.com</p>
-                        <a href=" https://www.linkedin.com/in/hala-hamdan-927941163"><i class="fa-brands fa-linkedin fa-xl"></i></a>
+                        <a href="https://www.linkedin.com/in/hala-hamdan-927941163"><i class="fa-brands fa-linkedin fa-xl"></i></a>
+                    </div>
+                </div>
+                <div class="reference">
+                    <img src="images/mohammad-frehat.png">
+                    <div class="layer">
+                        <h3>Mohammad Frehat</h3>
+                        <p>Orange Coding Academy Manager</p>
+                        <a href="https://www.linkedin.com/in/mohammed-frehat-9222402b/"><i class="fa-brands fa-linkedin fa-xl"></i></a>
+                    </div>
+                </div>
+                <div class="reference">
+                    <img src="images/hala-obeidat.png">
+                    <div class="layer">
+                        <h3>Hala Obeidat</h3>
+                        <p>Job Coach Specialist @ Orange Coding Academy</p>
+                        <a href="https://www.linkedin.com/in/hala-obeidat12/"><i class="fa-brands fa-linkedin fa-xl"></i></a>
+                    </div>
+                </div>
+                <div class="reference">
+                    <img src="images/sujoud-mohammad.png">
+                    <div class="layer">
+                        <h3>Sujoud Mohammad</h3>
+                        <p>Technical Trainer at Orange Coding Academy</p>
+                        <a href="https://www.linkedin.com/in/sujoud-mohammad-57162b234/"><i class="fa-brands fa-linkedin fa-xl"></i></a>
                     </div>
                 </div>
             </div>
@@ -173,6 +243,14 @@
             event.currentTarget.classList.add("active-link");
             document.getElementById(tabname).classList.add("active-tab");
         }
+        function closetab(tabname){
+            for(tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+        }
     </script>
     <script>
         var sidemenu = document.getElementById("sidemenu");
@@ -180,7 +258,7 @@
             sidemenu.style.right="0";
         }
         function closemenu(){
-            sidemenu.style.right="-200px";
+            sidemenu.style.right="-150px";
         }
     </script>
 </body>

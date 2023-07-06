@@ -14,7 +14,7 @@ body {
 #header {
     width: 100%;
     height: 100vh;
-    background-image: url(images/background.png);
+    background-image: url(images/desktop-background.png);
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -111,7 +111,7 @@ nav ul li a:hover::after {
 }
 
 .about-col-1 {
-    flex-basis: 35%;
+    flex-basis: 34%;
 }
 
 .about-col-1 img {
@@ -120,7 +120,8 @@ nav ul li a:hover::after {
 }
 
 .about-col-2 {
-    flex-basis: 60%;
+    flex-basis: 65%;
+    position: relative;
 }
 
 .sub-title {
@@ -131,13 +132,12 @@ nav ul li a:hover::after {
 
 .tab-titles {
     display: flex;
-    margin: 20px 0 40px;
 }
 
 .tab-links {
     margin-right: 50px;
     font-size: 18px;
-    font-weight: 500;
+    font-weight: bold;
     cursor: pointer;
     position: relative;
 }
@@ -161,6 +161,14 @@ nav ul li a:hover::after {
     list-style: none;
     margin: 10px 0;
 }
+.tab-contents ul {
+    position: absolute;
+    background-color: white;
+    width: 95%;
+    text-align: left;
+    padding: 0;
+    border-radius: 10px;
+}
 
 .tab-contents ul li span {
     color: #A89C84;
@@ -174,6 +182,72 @@ nav ul li a:hover::after {
 .tab-contents.active-tab {
     display: block;
 }
+
+.skill-box{
+    width: 100%;
+    margin-top: 10px;
+}
+
+.skill-box .title{
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+}
+
+
+.skill-box .skill-bar{
+    height: 8px;
+    width: 100%;
+    border-radius: 6px;
+    margin-top: 6px;
+    background: rgba(0, 0, 0,0.1);
+}
+
+.skill-bar .skill-per {
+    position: relative;
+    display: block;
+    height: 100%;
+    border-radius: 6px;
+    background: #A89C84;
+    animation: progress 0.4s ease-in-out forwards;
+    opacity: 0;
+}
+
+.skill-box.speaking .skill-per {
+    width: 90%;
+}
+
+.skill-box.listening .skill-per {
+    width: 95%;
+}
+
+.skill-box.writing .skill-per {
+    width: 70%;
+}
+
+.skill-box.speakinga .skill-per {
+    width: 95%;
+}
+
+.skill-box.listeninga .skill-per {
+    width: 100%;
+}
+
+.skill-box.writinga .skill-per {
+    width: 100%;
+}
+
+@keyframes progress {
+    0%{
+        width: 0;
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
 
 /* ---------------------------------------------------------learnings section--------------------------------------------------------------------- */
 
@@ -223,41 +297,33 @@ nav ul li a:hover::after {
 
 /* -------------------------------------------refrence sectione------------------------------------------------------ */
 
-#refrence {
+#reference-container {
     padding: 50px 0;
-    background-image: url(images/backgraoun2.png);
-    background-size:cover ;
-    background-position: center;
-    width: 100%;
-    height: 100vh;
-    margin-bottom: 10%;
+    color: #fff;
 }
 
-.refrence-list {
+.reference-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
     gap: 40px;
     margin-top: 50px;
 }
 
-.refrence {
+.reference {
     border-radius: 10px;
     position: relative;
     overflow: hidden;
-    padding: 23px 0;
 }
 
-.refrence img {
-    margin-left: 30%;
-    width: 40%;
+.reference img {
+    width: 100%;
     border-radius: 10px;
     display: block;
     transition: transform 0.5s;
 }
 
 .layer {
-    margin-left: 28%;
-    width: 44%;
+    width: 100%;
     height: 0;
     background: linear-gradient(rgba(0,0,0,0.6), #A89C84);
     border-radius: 10px;
@@ -265,49 +331,39 @@ nav ul li a:hover::after {
     left: 0;
     bottom: 0;
     overflow: hidden;
-    display:flex;
-    align-items: center;
-    justify-content: center;
+    display: flex;
     flex-direction: column;
-    padding: 0 40px;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    padding: 0 40px;
     font-size: 14px;
     transition: height 0.5s;
 }
 
-.layer h3 {
+.layer h3{
     font-weight: 500;
     margin-bottom: 20px;
-    color: #fff;
 }
 
-.layer p {
-    color: #fff;
-}
-
-.layer a {
-    margin-top: 40px;
+.layer a{
+    margin-top: 20px;
     color: #A89C84;
     text-decoration: none;
     font-size: 18px;
     line-height: 60px;
-    background-color: #fff;
+    background: #fff;
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    text-align: center;
 }
 
-.refrence:hover img {
+.reference:hover img{
     transform: scale(1.1);
 }
 
-.refrence:hover .layer {
+.reference:hover .layer {
     height: 100%;
-}
-
-.sub-title.refrence {
-    text-align: center;
 }
 
 .button {
@@ -409,14 +465,17 @@ form .btn2 {
 nav .fas{
     display: none;
 }
+.about-col-2 .fas {
+    display: none;
+}
 @media screen and (max-width: 480px) {
     #header {
-        background-image: url(images/phone-background.png);
+        background-image: url(images/phonebackground2.png);
     }
 
     .header-text {
-        margin-top: 80%;
-        font-size: 10px;
+        margin-top: 68%;
+        font-size: 14px;
     }
     .header-text h1 {
         font-size: 22px;
@@ -424,8 +483,14 @@ nav .fas{
 
     nav .fas{
         display: block;
-        font-size: 25px;
+        font-size: 27px;
         
+    }
+    .about-col-2 .fas {
+        display: block;
+        font-size: 25px;
+        margin-left: 89%;
+        margin-top: 20px;
     }
 
     nav .fas-times {
@@ -436,15 +501,15 @@ nav .fas{
         position: fixed;
         top:0;
         right: -200px;
-        width: 200px;
-        height: 100vh;
+        border-radius: 10px;
+        width: 150px;
+        height: 250px;
         padding-top:50px ;
         z-index: 2;
         transition: right 0.5s;
     }
     nav ul li {
         display: block;
-        margin: 25px;
     }
 
     nav ul .fas {
@@ -461,28 +526,19 @@ nav .fas{
     .header-social {
         gap: 8px;
     }
-        
-    .layer{
-        font-size: 8px;
-        width: 66%;
-        margin-left: 17%;
-        bottom: 14px;
+    .contact-left p {
+        margin-left: 12%;
+    }
+    .contact-left .social-icons {
+        text-align: center;
     }
 
-    .layer a {
-        margin-top: 5px;
-        font-size: 8px;
-        line-height: 30px;
-        width: 30px;
-        height: 30px;
-        
-    }
-
-    .refrence:hover .layer {
-        height: 87%;
-    }
     .sub-title{
         font-size: 40px;
+        text-align: center;
+    }
+    #about {
+        padding-bottom: 0;
     }
     .about-col-1, .about-col-2{
         flex-basis: 100%;
@@ -493,24 +549,33 @@ nav .fas{
     .about-col-2{
         font-size: 14px;
     }
+
+    .about-col-2 ul {
+        padding: 0 20px 20px;
+        border: 2px solid;
+        box-shadow: 5px 5px 7px #A89C84;
+    }
+    
+    .reference {
+        width: 70%;
+    }
+    .reference-list{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+        gap: 10px;
+    }
     .tab-links{
         font-size: 16px;
         margin-right: 20px;
+        font-size: 14px;
     }
     .contact-left, .contact-right {
         flex-basis: 100%;
     }
     .copyright{
         font-size: 14px;
-    }
-    #refrence {
-        background-image: url(images/phone-background2.png);
-        margin-bottom: -50px;
-    }
-
-    #refrence img {
-        width: 70%;
-        margin-left: 20%;
     }
 
     .button {
@@ -531,6 +596,7 @@ nav .fas{
     nav ul li a {
         color: #fff;
     }
+
 }
 
 @media screen and (max-width: 768px) and (min-width: 481px) {
@@ -543,6 +609,13 @@ nav .fas{
         font-size: 25px;
         
     }
+
+    .about-col-2 .fas {
+        display: block;
+        font-size: 25px;
+        margin-left: 95%;
+        margin-top: 20px;
+    }
     .refrence:hover .layer {
         height: 97%;
     }
@@ -554,15 +627,15 @@ nav .fas{
         position: fixed;
         top:0;
         right: -200px;
-        width: 200px;
-        height: 100vh;
+        border-radius: 6px;
+        width: 150px;
+        height: 250px;
         padding-top:50px ;
         z-index: 2;
         transition: right 0.5s;
     }
     nav ul li {
         display: block;
-        margin: 25px;
     }
 
     nav ul .fas {
@@ -574,6 +647,15 @@ nav .fas{
     nav ul li a {
         color: #fff;
     }
+
+    #about {
+        padding-bottom: 0;
+    }
+    .about-col-2 ul {
+        padding: 0 20px 20px;
+        border: 2px solid;
+        box-shadow: 5px 5px 7px #A89C84;
+    }
     .sub-title{
         font-size: 40px;
     }
@@ -584,8 +666,21 @@ nav .fas{
         font-size: 12px;
     }
     
-
     .social-icons a{
         font-size: 18px;
+    }
+    .learnings-list {
+        justify-content: center;
+    }
+    .row {
+        justify-content: center;
+        text-align: center;
+    }
+    #about {
+        padding: 10px 0;
+    }
+
+    #about h1 {
+        padding-top: 10px;
     }
 }
